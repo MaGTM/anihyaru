@@ -1,0 +1,81 @@
+.sliderBlock {
+  overflow: hidden;
+  position: relative;
+}
+.sliderBlock .sliderImagesBlock {
+  display: flex;
+  position: relative;
+  right: 0;
+  transition: right 0.3s ease-in-out;
+}
+.sliderBlock .sliderImagesBlock .sliderImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sliderBlock .sliderImagesBlock .sliderImage h2 {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  font-family: Comfortaa, sans-serif;
+  width: 49.5%;
+  text-align: center;
+  cursor: default;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.sliderBlock svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.sliderBlock svg.prev {
+  left: 0;
+}
+.sliderBlock svg.next {
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+.sliderBlock .progressBar {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  width: 100%;
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: space-between;
+}
+.sliderBlock .progressBarItem {
+  border-radius: 2px;
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sliderBlock .progressBarItem .line {
+  position: absolute;
+  height: 100%;
+  width: 0;
+}
+.sliderBlock .progressBarItem.active .line {
+  animation-name: sliderLinesAnimation;
+  animation-timing-function: linear;
+}
+@keyframes sliderLinesAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .sliderBlock .sliderImagesBlock .sliderImage h2 {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=SliderComponent.module.css.map */

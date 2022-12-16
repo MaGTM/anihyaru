@@ -1,0 +1,17 @@
+.content {
+  position: relative;
+  height: 100%;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    text-align: center;
+  }
+  .content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=UserFavourites.module.css.map */

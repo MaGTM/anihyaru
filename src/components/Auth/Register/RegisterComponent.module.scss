@@ -1,0 +1,124 @@
+.content {
+  justify-self: center;
+  align-self: center;
+  width: 700px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blockbg);
+  border-radius: 20px;
+  position: relative;
+
+  form {
+    height: 430px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    .inputDiv {
+      width: 446px;
+      height: 50px;
+      position: relative;
+      label {
+        font-family: Comfortaa, sans-serif;
+        font-size: 16px;
+        color: var(--default--txt);
+        p {
+          margin-left: 8px;
+          color: var(--form--label);
+        }
+        input {
+          background-color: var(--bg);
+          color: var(--default--txt);
+          padding-left: 8px;
+          border-radius: 5px;
+          font-family: Inter, sans-serif;
+          font-size: 16px;
+        }
+      }
+    }
+
+    button {
+      width: 180px;
+      height: 50px;
+      background-color: var(--accent);
+      color: var(--neutral--txt);
+      font-size: 18px;
+      font-family: Comfortaa,sans-serif;
+      font-weight: 700;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: var(--accent--disable);
+        cursor: default;
+      }
+    }
+  }
+
+  a {
+    color: var(--accent);
+    margin-top: 10px;
+  }
+
+  .errorMsg {
+    background-color: #FE7B7B;
+    padding: 8px 10px;
+    color: white;
+    font-family: Comfortaa, sans-serif;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    width: 100vw;
+    height: 550px;
+    align-self: flex-start;
+    margin-top: calc(65px + 50px);
+    form {
+      height: 455px;
+
+      .inputDiv {
+        width: 300px;
+        height: 40px;
+        label {
+          font-size: 12px;
+          input {
+            font-size: 12px;
+          }
+
+          &:nth-child(2) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      button {
+        width: 140px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+
+    .forger {
+      font-size: 12px;
+    }
+    a {
+      font-size: 12px;
+    }
+
+    .errorMsg {
+      bottom: auto;
+      top: calc(0px - 30px);
+      font-size: 12px;
+      padding: 3px 5px;
+    }
+  }
+}

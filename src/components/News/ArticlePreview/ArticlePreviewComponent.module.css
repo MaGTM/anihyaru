@@ -1,0 +1,125 @@
+.article {
+  text-decoration: none;
+  color: var(--default--txt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 432px;
+  height: 564px;
+  background-color: var(--blockbg);
+  border-radius: 20px;
+  position: relative;
+  justify-content: space-between;
+}
+.article img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.article h2 {
+  color: var(--accent--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.article .description {
+  font-size: 16px;
+  padding: 0 16px;
+}
+.article .articleStats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 0 16px;
+}
+.article .articleStats div {
+  display: flex;
+  align-items: center;
+}
+.article .articleStats div p {
+  padding: 0;
+  margin-left: 5px;
+}
+.article .articleStats div svg {
+  fill: var(--default--txt);
+  width: 20px;
+  height: 20px;
+}
+.article .bookmarkBlock {
+  position: absolute;
+  background-color: var(--accent);
+  border-radius: 0 10px 10px 10px;
+  color: var(--neutral--txt);
+  top: 0;
+  margin-top: 54px;
+  padding: 8px 15px;
+  font-family: Comfortaa, sans-serif;
+  font-weight: 800;
+  left: -12px;
+}
+.article .bookmarkBlock::before {
+  display: block;
+  content: " ";
+  background-color: var(--accent);
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+.article .bookmarkBlock::after {
+  display: block;
+  content: " ";
+  background-color: var(--accent--disable);
+  width: 12px;
+  height: 20px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border-radius: 100px 0 0 100px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .article {
+    width: 100%;
+    height: 300px;
+  }
+  .article h2 {
+    font-size: 16px;
+  }
+  .article .description {
+    width: 100%;
+    font-size: 12px;
+    max-height: 75px;
+    padding: 0 8px;
+    overflow-y: hidden;
+  }
+  .article .articleStats {
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+  .article .articleStats div p {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 960px) {
+  .article {
+    height: 400px;
+  }
+  .article h2 {
+    font-size: 18px;
+  }
+  .article .description {
+    max-height: 175px;
+    font-size: 14px;
+  }
+  .article .articleStats {
+    margin-bottom: 12px;
+  }
+  .article .articleStats div p {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=ArticlePreviewComponent.module.css.map */

@@ -1,0 +1,55 @@
+.content {
+  grid-area: Stats;
+  background-color: var(--blockbg);
+  border-radius: 20px;
+  height: 91px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  .item {
+    display: flex;
+    align-items: center;
+    font-family: Comfortaa, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--accent--txt);
+    p {
+      margin-left: 11px;
+    }
+    svg {
+      path {
+        fill: var(--accent);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    height: 57px;
+    border-radius: 0 0 20px 20px;
+
+    .item {
+      font-size: 16px;
+      p {
+        margin-left: 8px;
+      }
+
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1060px) {
+  .content {
+    .item {
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

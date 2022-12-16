@@ -1,0 +1,54 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content .notfound {
+  position: relative;
+  width: 1200px;
+  display: flex;
+}
+.content .notfound p {
+  position: relative;
+  font-size: 120px;
+  font-weight: 800;
+  text-align: center;
+  z-index: 10;
+}
+.content .notfound img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) rotate(19deg);
+  z-index: 5;
+}
+.content a {
+  color: var(--neutral--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 60px;
+  background-color: var(--accent);
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content .notfound {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .content .notfound p {
+    font-size: 55px;
+  }
+  .content .notfound img {
+    width: 50%;
+  }
+  .content a {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=NotFound.module.css.map */

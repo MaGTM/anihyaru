@@ -1,0 +1,110 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1430px;
+  margin-top: 13px;
+}
+.content .blockContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.content .blockContent h2 {
+  font-family: Comfortaa, sans-serif;
+  font-size: 22px;
+}
+.content .blockContent.top {
+  height: 522px;
+}
+.content .blockContent.top .topListBlock {
+  background-color: var(--blockbg);
+  width: 350px;
+  padding: 20px 30px 15px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.content .blockContent.top .topListBlock .topList {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .blockContent.top .topListBlock .topList .item {
+  color: var(--neutral--txt);
+  background-color: var(--accent);
+  padding: 13px 34px;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+.content .blockContent.top .topListBlock .topList .item:last-child {
+  margin-bottom: 0;
+}
+.content .blockContent.top .topListBlock .topList .item:hover {
+  background-color: var(--accent--disable);
+}
+.content .blockContent.bot {
+  margin-top: 75px;
+  height: 450px;
+  margin-bottom: 75px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    flex-direction: column;
+    width: calc(100vw - 20px);
+    flex-wrap: nowrap;
+    margin-top: 104px;
+  }
+  .content ::-webkit-scrollbar {
+    display: block;
+  }
+  .content .blockContent {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .content .blockContent.top {
+    height: auto;
+  }
+  .content .blockContent.top .topListBlock {
+    width: 100%;
+    max-height: 232px;
+    margin-top: 25px;
+  }
+  .content .blockContent.top .topListBlock .topList {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .content .blockContent.top .topListBlock .topList .item {
+    padding: 10px 10px;
+  }
+  .content .blockContent.bot {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    margin-top: 25px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1600px) {
+  .content {
+    margin-left: 80px;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1430px) {
+  .content .blockContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content .blockContent.top {
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=HomeComponents.module.css.map */

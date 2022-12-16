@@ -1,0 +1,90 @@
+.sortBlock {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-family: Comfortaa, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+
+  .select {
+    color: var(--accent--txt);
+    margin-left: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+
+    span {
+      width: 370px;
+      height: 40px;
+      display: flex;
+      background-color: var(--blockbg);
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        width: 11px;
+        height: 20px;
+        transform: translateY(-50%) rotate(-90deg);
+        transition: transform 0.3s ease-in-out;
+        top: 50%;
+        right: 0;
+        margin-right: 10px;
+        cursor: pointer;
+        path {
+          fill: var(--accent)
+        }
+      }
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      height: 0;
+      overflow-y: hidden;
+      position: absolute;
+      top: 0;
+      margin-top: 40px;
+      transition: height 0.3s ease-in-out;
+      z-index: 150;
+
+      span {
+        width: 370px;
+        height: 40px;
+        background-color: var(--blockbg);
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+    }
+
+    &.active {
+      span {
+        svg {
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
+
+      .options {
+        height: 130px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .sortBlock {
+    justify-content: center;
+    label {
+      display: none;
+    }
+    .select {
+      margin-left: 0;
+    }
+  }
+}

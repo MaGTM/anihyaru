@@ -1,0 +1,136 @@
+.article {
+  text-decoration: none;
+  color: var(--default--txt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 432px;
+  height: 564px;
+  background-color: var(--blockbg);
+  border-radius: 20px;
+  position: relative;
+  justify-content: space-between;
+
+  img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  h2 {
+    color: var(--accent--txt);
+    font-family: Comfortaa, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .articleStats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0 16px;
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        padding: 0;
+        margin-left: 5px;
+      }
+      svg {
+        fill: var(--default--txt);
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .bookmarkBlock {
+    position: absolute;
+    background-color: var(--accent);
+    border-radius: 0 10px 10px 10px;
+    color: var(--neutral--txt);
+    top: 0;
+    margin-top: 54px;
+    padding: 8px 15px;
+    font-family: Comfortaa, sans-serif;
+    font-weight: 800;
+    left: -12px;
+    &::before {
+      display: block;
+      content: ' ';
+      background-color: var(--accent);
+      width: 12px;
+      height: 10px;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+    }
+    &::after {
+      display: block;
+      content: ' ';
+      background-color: var(--accent--disable);
+      width: 12px;
+      height: 20px;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      border-radius: 100px 0 0 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .article {
+    width: calc(100%);
+    height: 300px;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    .description {
+      width: 100%;
+      font-size: 12px;
+      max-height: 75px;
+      padding: 0 8px;
+      overflow-y: hidden;
+    }
+
+    .articleStats {
+      margin-bottom: 8px;
+      padding: 0 8px;
+      div {
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 960px) {
+  .article {
+    height: 400px;
+    h2 {
+      font-size: 18px;
+    }
+
+    .description {
+      max-height: 175px;
+      font-size: 14px;
+    }
+
+    .articleStats {
+      margin-bottom: 12px;
+      div {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

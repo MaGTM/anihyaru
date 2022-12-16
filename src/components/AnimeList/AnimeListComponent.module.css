@@ -1,0 +1,78 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content h1 {
+  font-family: Comfortaa, sans-serif;
+  font-size: 30px;
+  margin-top: 35px;
+  margin-bottom: 102px;
+}
+.content .mainContent {
+  display: flex;
+  position: relative;
+  min-height: 1218px;
+}
+.content .mainContent .animeListBlock {
+  width: 890px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.loader {
+  display: grid;
+  width: 1240px;
+  gap: 30px;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 367px 367px 367px;
+}
+.loader div {
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content .mainContent {
+    min-height: calc(100vh - 65px - 30px);
+  }
+  .content .mainContent .animeListBlock {
+    margin-top: 30px;
+    width: 337px;
+  }
+  .content #observingBlock {
+    display: block;
+    transform: translateY(-100%);
+    width: 2px;
+    height: 2px;
+  }
+  .loader {
+    width: 645px;
+    gap: 20px;
+    grid-template-columns: 99px 99px 99px;
+    grid-template-rows: 215px 215px 215px 215px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 960px) {
+  .content .mainContent {
+    min-height: calc(100vh - 65px - 30px);
+  }
+  .content .mainContent .animeListBlock {
+    width: 512px;
+    gap: 0 20px;
+  }
+  .loader {
+    width: 645px;
+    gap: 20px 20px;
+    grid-template-columns: 113px 113px 113px 113px;
+    grid-template-rows: 262.2px 262.2px 262.2px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1130px) {
+  .content {
+    margin-left: 80px;
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=AnimeListComponent.module.css.map */

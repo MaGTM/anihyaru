@@ -1,0 +1,119 @@
+.content[data-fourth=true] {
+  left: unset;
+  right: 100%;
+}
+.content[data-fourth=true] .descriptionBlock {
+  margin-left: 0;
+  margin-right: 25px;
+}
+.content[data-fourth=true] .descriptionBlock::before {
+  transform: rotate(225deg);
+  left: calc(100% - 15px);
+}
+
+.content {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 100%;
+}
+.content .descriptionBlock {
+  position: relative;
+  width: 430px;
+  background-color: var(--blockbg);
+  border: var(--default--txt) 1px solid;
+  height: calc(100% + 20px);
+  z-index: 150;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 14px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  margin-left: 25px;
+}
+.content .descriptionBlock .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .descriptionBlock .title h3 {
+  color: var(--accent--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 20px;
+  width: calc(100% - 50px);
+}
+.content .descriptionBlock .title svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--accent--txt);
+  cursor: pointer;
+}
+.content .descriptionBlock::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--blockbg);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  right: calc(100% - 15px);
+  border-bottom: 1px var(--default--txt) solid;
+  border-left: 1px var(--default--txt) solid;
+  border-radius: 0 0 0 5px;
+}
+.content .descriptionBlock #description {
+  position: relative;
+  z-index: 150;
+  width: 100%;
+  height: 160px;
+  overflow-y: hidden;
+}
+.content .descriptionBlock .topDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.content .descriptionBlock .topDiv span {
+  color: var(--accent--txt);
+  text-transform: uppercase;
+}
+.content .descriptionBlock .topDiv span.status {
+  color: white;
+  padding: 2px 15px;
+  border-radius: 5px;
+  text-transform: none;
+}
+.content .descriptionBlock .topDiv span.status.ongoing {
+  background-color: #5F8CFE;
+}
+.content .descriptionBlock .topDiv span.status.released {
+  background-color: var(--accent);
+}
+.content .descriptionBlock .topDiv span.status.anons {
+  background-color: #FE7B7B;
+}
+.content .descriptionBlock .botDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.content .descriptionBlock #genres {
+  color: var(--accent--txt);
+  text-decoration-skip-ink: none;
+}
+.content .descriptionBlock .loader {
+  z-index: 150;
+  display: grid;
+  grid-template-rows: 24px 160px 1fr 1fr;
+  grid-template-columns: 400px;
+  grid-row-gap: 20px;
+  height: 100%;
+}
+.content .descriptionBlock .loader div {
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=AnimeDescriptionComponent.module.css.map */

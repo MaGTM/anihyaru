@@ -1,0 +1,118 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1430px;
+  margin-top: 13px;
+
+  .blockContent {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    h2 {
+      font-family: Comfortaa, sans-serif;
+      font-size: 22px;
+    }
+
+    &.top {
+      height: 522px;
+      .topListBlock {
+        background-color: var(--blockbg);
+        width: 350px;
+        padding: 20px 30px 15px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        .topList {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .item {
+            color: var(--neutral--txt);
+            background-color: var(--accent);
+            padding: 13px 34px;
+            text-decoration: none;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            font-size: 17px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &:hover {
+              background-color: var(--accent--disable);
+            }
+          }
+        }
+      }
+    }
+
+    &.bot {
+      margin-top: 75px;
+      height: 450px;
+      margin-bottom: 75px;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    ::-webkit-scrollbar {
+      display: block;
+    }
+    flex-direction: column;
+    width: calc(100vw - 20px);
+    flex-wrap: nowrap;
+    margin-top: calc(65px + 64px - 25px);
+    .blockContent {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 25px;
+      &.top {
+        height: auto;
+        .topListBlock {
+          width: 100%;
+          max-height: 232px;
+          margin-top: 25px;
+          .topList {
+            width: 100%;
+            overflow-y: scroll;
+            .item {
+              padding: 10px 10px;
+            }
+          }
+        }
+      }
+
+      &.bot {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1600px) {
+  .content {
+    margin-left: 80px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1430px) {
+  .content {
+    .blockContent {
+      flex-direction: column;
+      align-items: center;
+      &.top {
+        height: 100vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.content {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  .sortBlock {
+    background-color: var(--blockbg);
+    border-radius: 20px;
+    width: 890px;
+    margin-bottom: 20px;
+    .sortInputsBlock {
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    bottom: 100%;
+    left: 0;
+    margin-left: 0;
+
+    .sortBlock {
+      transform: translateY(-50%);
+      width: 337px;
+      position: absolute;
+      border-radius: 5px;
+      padding: 0 10px;
+      height: 43px;
+      h3 {
+        display: none;
+        margin: 0;
+      }
+      .sortInputsBlock {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        h3 {
+          display: block;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 960px) {
+  .content {
+    .sortBlock {
+      width: 512px;
+    }
+  }
+}

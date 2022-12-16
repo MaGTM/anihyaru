@@ -1,0 +1,130 @@
+.content {
+  width: 200px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 367px;
+  margin-bottom: 30px;
+}
+.content img {
+  width: 200px;
+  height: 284px;
+  border-radius: 20px 20px 0 0;
+}
+.content .infoBlock {
+  background-color: var(--blockbg);
+  padding: 0 15px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 3;
+  border-radius: 0 0 20px 20px;
+}
+.content .infoBlock h2 {
+  color: var(--default--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+  margin-top: 11px;
+}
+.content .infoBlock div {
+  display: flex;
+  justify-content: space-between;
+}
+.content .infoBlock div p {
+  color: var(--accent--txt);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+.content .infoBlock div p:first-child {
+  text-transform: uppercase;
+}
+.content .bookmarkBlock {
+  position: absolute;
+  background-color: var(--accent);
+  border-radius: 0 10px 10px 10px;
+  color: var(--neutral--txt);
+  top: 0;
+  margin-top: 54px;
+  padding: 8px 15px;
+  font-family: Comfortaa, sans-serif;
+  font-weight: 800;
+  left: -12px;
+}
+.content .bookmarkBlock::before {
+  display: block;
+  content: " ";
+  background-color: var(--accent);
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+.content .bookmarkBlock::after {
+  display: block;
+  content: " ";
+  background-color: var(--accent--disable);
+  width: 12px;
+  height: 20px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border-radius: 100px 0 0 100px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    width: 99px;
+    min-height: 215px;
+    margin-bottom: 20px;
+  }
+  .content img {
+    width: 99px;
+    height: 140px;
+  }
+  .content .infoBlock {
+    padding: 0 12px 8px 12px;
+  }
+  .content .infoBlock h2 {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  .content .infoBlock div p {
+    font-size: 10px;
+  }
+  .content .bookmarkBlock {
+    margin-top: 30px;
+    padding: 5px 9px;
+    font-size: 10px;
+    left: -6px;
+  }
+  .content .bookmarkBlock::before, .content .bookmarkBlock::after {
+    height: 10px;
+    width: 6px;
+  }
+  .content .bookmarkBlock::before {
+    border-radius: 20px 0 0 0;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 960px) {
+  .content {
+    min-height: 262.2px;
+    width: 113px;
+  }
+  .content img {
+    width: 113px;
+    height: 160px;
+  }
+  .content .infoBlock h2 {
+    font-size: 12px;
+  }
+  .content .infoBlock div p {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=AnimeListItem.module.css.map */

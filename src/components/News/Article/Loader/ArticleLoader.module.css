@@ -1,0 +1,126 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 50px 20px 50px;
+  width: 992px;
+  margin-top: 13px;
+  background-color: var(--blockbg);
+  border-radius: 20px 20px 0 0;
+}
+.content .headerInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 63px;
+}
+.content .headerInfo .navigation {
+  width: 150px;
+  height: 20px;
+  border-radius: 5px;
+  animation: pulsingColor 0.5s infinite linear alternate;
+}
+.content .headerInfo h1 {
+  width: 300px;
+  height: 20px;
+  border-radius: 5px;
+  animation: pulsingColor 0.5s infinite linear alternate;
+}
+.content .headerInfo .toFavouriteBtn svg {
+  width: 29px;
+  height: 29px;
+  fill: var(--default--txt);
+}
+.content .articleContent {
+  width: 100%;
+}
+.content .articleContent::after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent);
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.content .latestNews {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+.content .latestNews div {
+  width: 201px;
+  height: 113px;
+  border-radius: 20px;
+  animation: pulsingColor 0.5s infinite linear alternate;
+}
+.content .latestNews::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent);
+  margin-top: 26px;
+  margin-bottom: 26px;
+  top: 100%;
+}
+.content .commentInputBlock {
+  margin-top: 52px;
+  width: 100%;
+  position: relative;
+}
+.content .commentInputBlock .skeletonText {
+  width: 30%;
+}
+.content .commentInputBlock .commentInput {
+  width: 100%;
+  height: 120px;
+  animation: pulsingColor 0.5s infinite linear alternate;
+  border-radius: 20px;
+}
+.content .commentInputBlock::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent);
+  margin-top: 26px;
+  margin-bottom: 26px;
+  top: 100%;
+}
+.content .commentsBlock {
+  margin-top: 52px;
+  width: 100%;
+}
+.content .commentsBlock .commentItem {
+  height: 120px;
+  width: 100%;
+  animation: pulsingColor 0.5s infinite linear alternate;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+@keyframes pulsingColor {
+  0% {
+    background-color: var(--bg);
+  }
+  100% {
+    background-color: var(--accent);
+  }
+}
+.content .skeletonText {
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  animation: pulsingColor 0.5s infinite linear alternate;
+  margin-bottom: 10px;
+}
+.content .skeletonText:nth-child(3n) {
+  width: 90%;
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=ArticleLoader.module.css.map */

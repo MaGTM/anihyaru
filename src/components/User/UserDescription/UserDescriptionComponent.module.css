@@ -1,0 +1,195 @@
+.content {
+  grid-area: userDescription;
+  height: 440px;
+  border-radius: 20px;
+  background-color: var(--blockbg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+}
+.content .avatarBlock {
+  position: relative;
+  margin-top: 35px;
+}
+.content .avatarBlock img {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  overflow: hidden;
+  outline: var(--accent) 5px solid;
+}
+.content .avatarBlock .noAvatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: var(--bg);
+  color: var(--neutral--txt);
+  font-size: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .avatarBlock input {
+  display: none;
+}
+.content .avatarBlock label {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  cursor: pointer;
+}
+.content .avatarBlock label svg path {
+  fill: var(--default--txt);
+}
+.content .avatarBlock label svg circle {
+  fill: var(--accent);
+}
+.content .usernameBlock {
+  margin-top: 32px;
+  text-align: center;
+}
+.content .usernameBlock h1 {
+  color: var(--accent--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 25px;
+}
+.content .usernameBlock p {
+  color: var(--default--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+.content .userDescriptionBlock {
+  margin-top: 30px;
+}
+.content .userDescriptionBlock textarea {
+  font-family: Inter, sans-serif;
+  width: 290px;
+  height: 104px;
+  font-size: 15px;
+  line-height: 18px;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 0.5rem;
+  border-radius: 20px;
+  overflow-y: hidden;
+  background-color: transparent;
+  color: var(--default--txt);
+}
+.content .userDescriptionBlock textarea:hover {
+  background-color: var(--bg);
+}
+.content .userDescriptionBlock textarea:focus {
+  background-color: var(--bg);
+}
+.content .logoutBlock button {
+  border: none;
+  outline: none;
+  background-color: #FE7B7B;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.content .cropperContainer {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+}
+.content .cropperContainer .cropper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.content .cropperContainer button {
+  background-color: var(--accent);
+  border: none;
+  margin-top: 50px;
+  color: var(--neutral--txt);
+  font-family: Comfortaa, sans-serif;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    display: grid;
+    grid-template-areas: "avatar description ." "username description ." ". logout .";
+    height: 170px;
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    grid-template-columns: 94px 100%;
+    grid-template-rows: 90px 30px 30px;
+    grid-column-gap: 30px;
+  }
+  .content .avatarBlock {
+    grid-area: avatar;
+    margin-top: 0;
+  }
+  .content .avatarBlock img {
+    width: 90px;
+    height: 90px;
+  }
+  .content .avatarBlock .noAvatar {
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+  }
+  .content .avatarBlock label {
+    bottom: -10%;
+    left: 60%;
+  }
+  .content .avatarBlock label svg {
+    width: 35px;
+    height: 35px;
+  }
+  .content .usernameBlock {
+    grid-area: username;
+    margin-top: 20px;
+  }
+  .content .usernameBlock h1 {
+    font-size: 20px;
+  }
+  .content .usernameBlock p {
+    font-size: 12px;
+  }
+  .content .userDescriptionBlock {
+    grid-area: description;
+  }
+  .content .userDescriptionBlock textarea {
+    width: calc(100% - 120px);
+    border: 2px var(--accent) solid;
+  }
+  .content .logoutBlock {
+    width: calc(100% - 120px);
+    grid-area: logout;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1060px) {
+  .content .userDescriptionBlock textarea {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=UserDescriptionComponent.module.css.map */

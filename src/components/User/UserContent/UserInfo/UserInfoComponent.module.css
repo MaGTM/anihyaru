@@ -1,0 +1,156 @@
+@charset "UTF-8";
+.content .settingsBlock h1 {
+  margin-bottom: 23px;
+}
+.content .settingsBlock .inputsBlock {
+  width: 534px;
+  font-size: 16px;
+  margin-left: 38px;
+}
+.content .settingsBlock .inputsBlock .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.content .settingsBlock .inputsBlock .item input {
+  width: 360px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--bg);
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: var(--form--label);
+}
+.content .settingsBlock .inputsBlock .item input:focus {
+  color: var(--default--txt);
+}
+.content .monthCheckBlock {
+  display: flex;
+  align-items: center;
+  margin-top: 20%;
+}
+.content .monthCheckBlock h3 {
+  font-family: Comfortaa, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-right: 132px;
+}
+.content .monthCheckBlock .days {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-gap: 30px;
+  position: relative;
+  cursor: default;
+  user-select: none;
+}
+.content .monthCheckBlock .days .item {
+  width: 30px;
+  height: 30px;
+  background-color: var(--bg);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .monthCheckBlock .days .item.active {
+  background-color: var(--accent);
+}
+.content .monthCheckBlock .days .info {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+  width: 100%;
+}
+.content .monthCheckBlock .days .info .item {
+  width: 20px;
+  height: 20px;
+}
+.content .monthCheckBlock .days .info div {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content .settingsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content .settingsBlock h1 {
+    font-size: 26px;
+  }
+  .content .settingsBlock .inputsBlock {
+    margin-left: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content .settingsBlock .inputsBlock .item {
+    position: relative;
+    width: auto;
+  }
+  .content .settingsBlock .inputsBlock .item label {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 2px;
+    margin-left: 10px;
+  }
+  .content .monthCheckBlock {
+    flex-direction: column;
+    margin-top: 37px;
+  }
+  .content .monthCheckBlock::before {
+    content: "Календарь посещений";
+    font-size: 24px;
+  }
+  .content .monthCheckBlock h3 {
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: var(--accent);
+  }
+  .content .monthCheckBlock .days {
+    grid-gap: 8px;
+  }
+  .content .monthCheckBlock .days .item {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  .content .monthCheckBlock .days .info {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1360px) {
+  .content .monthCheckBlock {
+    width: 100%;
+  }
+  .content .monthCheckBlock h3 {
+    margin-right: 50px;
+  }
+  .content .monthCheckBlock .days {
+    grid-gap: 15px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1160px) {
+  .content .settingsBlock .inputsBlock {
+    margin-left: 18px;
+  }
+  .content .monthCheckBlock {
+    width: 100%;
+  }
+  .content .monthCheckBlock h3 {
+    margin-right: 30px;
+  }
+}
+
+/*# sourceMappingURL=UserInfoComponent.module.css.map */

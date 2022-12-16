@@ -1,0 +1,18 @@
+.loaderBasic {
+  min-height: 100%;
+}
+.loaderBasic .loaderBlock {
+  background-color: var(--accent--disable);
+  display: block;
+  animation: pulsingColor 1s linear infinite alternate;
+}
+@keyframes pulsingColor {
+  0% {
+    background-color: var(--accent--disable);
+  }
+  100% {
+    background-color: var(--blockbg);
+  }
+}
+
+/*# sourceMappingURL=Loader.module.css.map */

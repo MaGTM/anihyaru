@@ -1,0 +1,81 @@
+.sortBlock {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-family: Comfortaa, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+.sortBlock .select {
+  color: var(--accent--txt);
+  margin-left: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+.sortBlock .select span {
+  width: 370px;
+  height: 40px;
+  display: flex;
+  background-color: var(--blockbg);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.sortBlock .select span svg {
+  position: absolute;
+  width: 11px;
+  height: 20px;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: transform 0.3s ease-in-out;
+  top: 50%;
+  right: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.sortBlock .select span svg path {
+  fill: var(--accent);
+}
+.sortBlock .select .options {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow-y: hidden;
+  position: absolute;
+  top: 0;
+  margin-top: 40px;
+  transition: height 0.3s ease-in-out;
+  z-index: 150;
+}
+.sortBlock .select .options span {
+  width: 370px;
+  height: 40px;
+  background-color: var(--blockbg);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.sortBlock .select.active span svg {
+  transform: translateY(-50%) rotate(90deg);
+}
+.sortBlock .select.active .options {
+  height: 130px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .sortBlock {
+    justify-content: center;
+  }
+  .sortBlock label {
+    display: none;
+  }
+  .sortBlock .select {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=SortComponent.module.css.map */

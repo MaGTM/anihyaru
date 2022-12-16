@@ -1,0 +1,112 @@
+.content {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: 374px 992px;
+  grid-template-rows: 1fr 100%;
+  gap: 50px 50px;
+  grid-template-areas: "userDescription Content" "Stats Content";
+}
+
+.loader {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: 374px 992px;
+  grid-template-rows: 1fr 100%;
+  gap: 50px 50px;
+  grid-template-areas: "userDescription Content" "Stats Content";
+}
+.loader div {
+  border-radius: 20px;
+}
+.loader div:nth-child(1) {
+  grid-area: userDescription;
+  height: 440px;
+}
+.loader div:nth-child(2) {
+  grid-area: Content;
+  height: calc(100vh - 110px);
+}
+.loader div:nth-child(3) {
+  grid-area: Stats;
+  height: 91px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    height: 630px;
+    grid-template-areas: "userDescription" "Stats" "Content";
+    grid-template-columns: 100vw;
+    grid-template-rows: 170px 57px 100%;
+    margin-top: 79px;
+    gap: 0;
+  }
+  .loader {
+    height: 630px;
+    grid-template-areas: "userDescription" "Stats" "Content";
+    grid-template-columns: 100vw;
+    grid-template-rows: 170px 57px 100%;
+    margin-top: 79px;
+    gap: 0;
+  }
+  .loader div:nth-child(1) {
+    grid-area: userDescription;
+    height: 170px;
+    border-radius: 20px 20px 0 0;
+  }
+  .loader div:nth-child(2) {
+    grid-area: Content;
+    height: 630px;
+    margin-top: 82px;
+  }
+  .loader div:nth-child(3) {
+    grid-area: Stats;
+    height: 57px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1585px) {
+  .content {
+    margin-left: 80px;
+  }
+  .loader {
+    margin-left: 80px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1505px) {
+  .content {
+    grid-template-columns: 324px 922px;
+    gap: 30px;
+  }
+  .loader {
+    grid-template-columns: 324px 922px;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1360px) {
+  .content {
+    grid-template-columns: 324px 722px;
+  }
+  .loader {
+    grid-template-columns: 324px 722px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1160px) {
+  .content {
+    grid-template-columns: 324px 622px;
+    gap: 15px;
+  }
+  .loader {
+    grid-template-columns: 324px 622px;
+    gap: 15px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1060px) {
+  .content {
+    grid-template-columns: 224px 622px;
+  }
+  .loader {
+    grid-template-columns: 224px 622px;
+  }
+}
+
+/*# sourceMappingURL=UserComponent.module.css.map */

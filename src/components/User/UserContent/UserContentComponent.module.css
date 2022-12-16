@@ -1,0 +1,120 @@
+.content {
+  grid-area: Content;
+  background-color: var(--blockbg);
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  padding: 8px 0 0 50px;
+  height: calc(100vh - 110px);
+}
+.content .userNav {
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  display: flex;
+  margin-left: 114px;
+  width: 350px;
+  justify-content: space-between;
+  height: 82px;
+  align-items: center;
+}
+.content .userNavItem {
+  cursor: pointer;
+  margin-left: 13px;
+}
+.content .userNavItem svg {
+  fill: var(--default--txt);
+  transition: fill 0.3s ease-in-out;
+}
+.content .userNavItem.active svg {
+  fill: var(--accent);
+}
+.content #indicator {
+  position: absolute;
+  width: 76px;
+  height: 82px;
+  background-color: var(--blockbg);
+  border-radius: 20px 20px 0 0;
+  z-index: -1;
+  left: 0;
+  transform: translateX(0px);
+  transition: transform 0.3s ease-in-out;
+}
+.content #indicator::before {
+  content: " ";
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  border-bottom-right-radius: 100%;
+  box-shadow: 6px 6px 0 4.5px var(--blockbg);
+}
+.content #indicator::after {
+  content: " ";
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  border-bottom-left-radius: 100%;
+  box-shadow: -6px 6px 0 4.5px var(--blockbg);
+}
+.content .userNavItem:nth-child(1).active ~ #indicator {
+  transform: translateX(0px);
+}
+.content .userNavItem:nth-child(2).active ~ #indicator {
+  transform: translateX(142.9px);
+}
+.content .userNavItem:nth-child(3).active ~ #indicator {
+  transform: translateX(285.8px);
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .content {
+    margin-top: 82px;
+    padding: 7px 6px;
+    height: 100%;
+  }
+  .content .userNav {
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -100%);
+    justify-content: space-around;
+    padding: 0 5px;
+  }
+  .content .userNavItem {
+    margin-left: 0;
+  }
+  .content .userNavItem svg {
+    width: 40px;
+    height: 40px;
+  }
+  .content #indicator {
+    border-radius: 0;
+    width: 66px;
+    left: 27px;
+  }
+  .content #indicator::before {
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 16px 0 0 6px var(--blockbg);
+  }
+  .content #indicator::after {
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -16px 0px 0 6px var(--blockbg);
+  }
+  .content .userNavItem:nth-child(1).active ~ #indicator {
+    transform: translateX(0);
+  }
+  .content .userNavItem:nth-child(2).active ~ #indicator {
+    transform: translateX(112.9px);
+  }
+  .content .userNavItem:nth-child(3).active ~ #indicator {
+    transform: translateX(227.8px);
+  }
+}
+
+/*# sourceMappingURL=UserContentComponent.module.css.map */

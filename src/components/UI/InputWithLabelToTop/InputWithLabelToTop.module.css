@@ -1,0 +1,37 @@
+.block {
+  height: 100%;
+  width: 100%;
+}
+.block p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: text;
+}
+.block input {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.block input:focus {
+  outline: none;
+}
+.block input:invalid {
+  border: #FE7B7B 1px solid;
+}
+.block .showPas {
+  position: absolute;
+  right: 0;
+  fill: var(--form--label);
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  cursor: pointer;
+  stroke: var(--form--label);
+}
+.block.focus p {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+/*# sourceMappingURL=InputWithLabelToTop.module.css.map */

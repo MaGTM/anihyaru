@@ -1,0 +1,41 @@
+.block {
+  height: 100%;
+  width: 100%;
+  p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: text;
+  }
+  input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid {
+      border: #FE7B7B 1px solid;
+    }
+
+  }
+
+  .showPas {
+    position: absolute;
+    right: 0;
+    fill: var(--form--label);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    cursor: pointer;
+    stroke: var(--form--label);
+  }
+
+  &.focus {
+    p {
+      top: 0;
+      transform: translateY(-100%);
+    }
+  }
+}

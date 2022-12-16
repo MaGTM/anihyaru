@@ -1,0 +1,195 @@
+.sortInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .listSortInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    input {
+      width: 200px;
+      height: 40px;
+      border: none;
+      background-color: var(--bg);
+      font-family: Comfortaa, sans-serif;
+      border-radius: 20px;
+      text-align: center;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    h3 {
+      font-weight: 400;
+      font-family: Comfortaa, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      user-select: none;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 12px;
+      position: absolute;
+      left: 3%;
+      pointer-events: none;
+      transform: rotate(-90deg);
+      path {
+        fill: var(--default--txt);
+      }
+    }
+  }
+
+  .choicesBlock {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    .choicesList {
+      position: relative;
+      z-index: 15;
+      .choiceItem {
+        background-color: var(--accent);
+        width: 270px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Comfortaa, sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        border-bottom: var(--default--txt) 1px solid;
+
+        &.active {
+          background-color: var(--accent--disable);
+        }
+
+        &:first-child {
+          border-radius: 20px 20px 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 20px 20px;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .checkboxSortInput {
+    width: 280px;
+    height: 40px;
+    border: none;
+    background-color: var(--bg);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    input {
+      display: none;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-family: Comfortaa, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      user-select: none;
+    }
+
+    .checkbox {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      background-color: var(--accent--disable);
+      border: var(--accent) 3px solid;
+      border-radius: 100%;
+      position: absolute;
+      left: 3%;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: ' ';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: var(--accent);
+        opacity: 0;
+      }
+
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 960px) {
+  .sortInput {
+    margin-bottom: 0;
+    &:nth-child(1) {
+      width: 105px;
+    }
+    &:nth-child(2) {
+      width: 53px;
+    }
+    &:nth-child(3) {
+      width: 53px;
+    }
+    &:nth-child(4) {
+      width: 53px;
+    }
+    .listSortInput {
+      width: 100%;
+      input {
+        width: 100%;
+        height: 23px;
+        border-radius: 5px;
+      }
+
+      h3 {
+        font-size: 10px;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    .choicesBlock {
+      .choicesList {
+        .choiceItem {
+          width: 105px;
+          height: 23px;
+          font-size: 8px;
+          font-weight: 400;
+
+          &:first-child {
+            border-radius: 5px 5px 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 0 5px 5px;
+          }
+        }
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}

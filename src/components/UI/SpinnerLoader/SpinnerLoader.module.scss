@@ -1,0 +1,17 @@
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-bottom-color: var(--accent);
+  animation: 1s spinningAnimation linear infinite;
+
+  @keyframes spinningAnimation {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}

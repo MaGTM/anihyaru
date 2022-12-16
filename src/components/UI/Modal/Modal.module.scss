@@ -1,0 +1,8 @@
+.modal {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+  &.active {
+    opacity: 0.5;
+  }
+}
